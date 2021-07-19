@@ -25,6 +25,9 @@ public class MySpringMVCDispatcherServletInitializer extends AbstractAnnotationC
         return new String[] {"/"};
     }
 
+    // Настройка фильтра для скрытого поля _method в форме HTML.
+    // Предоставляет возможность обрабатывать PATCH запросы
+
     @Override
     public void onStartup(ServletContext aServletContext) throws ServletException {
         super.onStartup(aServletContext);
